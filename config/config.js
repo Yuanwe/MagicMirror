@@ -21,7 +21,7 @@ var config = {
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
-	language: "en",
+	language: "zh-cn",
 	timeFormat: 24,
 	units: "metric",
 
@@ -39,13 +39,13 @@ var config = {
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "日历",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+						url: "https://p30-calendars.icloud.com/holidays/cn_zh.ics"
 					}
 				]
 			}
@@ -58,9 +58,9 @@ var config = {
 			module: "currentweather",
 			position: "top_right",
 			config: {
-				location: "New York",
-				locationID: "",  //ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Beijing, CN",
+				locationID: "1816670",  //ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
+				appid: "8dbc4e40ab5bc1034c403c865a498c52"
 			}
 		},
 		{
@@ -68,9 +68,9 @@ var config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from https://openweathermap.org/city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Beijing, CN",
+				locationID: "1816670",  //ID from https://openweathermap.org/city
+				appid: "8dbc4e40ab5bc1034c403c865a498c52"
 			}
 		},
 		{
@@ -79,8 +79,14 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "Engadget 中文版",
+						url: "https://cn.engadget.com/rss.xml"
+					},{
+						title: "IT之家",
+						url: "https://www.ithome.com/rss/"
+					},{
+						title: "TechWeb全站精华",
+						url: "http://www.techweb.com.cn/rss/allnews.xml"
 					}
 				],
 				showSourceTitle: true,
